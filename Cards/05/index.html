@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>05</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<button class="switch">
+			<i class="fas fa-adjust"></i>
+		</button>
+		<div class="container">
+			<article class="card">
+				<div class="card__image">
+					<img src="workout.jpg" alt="" />
+				</div>
+				<div class="card__body">
+					<h2 class="card__title">The strength within</h2>
+					<h3 class="card__subtitle">Unleash your inner beast</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+						beatae corporis debitis dicta dolorem ea eveniet exercitationem id
+						modi neque nulla, perspiciatis quam quibusdam quisquam, ratione
+						rerum sint ut vitae!
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+						beatae corporis debitis dicta dolorem ea eveniet exercitationem id
+						modi neque nulla, perspiciatis quam quibusdam quisquam, ratione
+						rerum sint ut vitae!
+					</p>
+					<a href="#" class="card__button">Learn more <span>&rarr;</span></a>
+				</div>
+			</article>
+		</div>
+
+		<script>
+			const bodyEl = document.body
+			const switchEl = document.querySelector('.switch')
+			const activeTheme = localStorage.getItem('theme')
+
+			if (activeTheme) {
+				bodyEl.classList.add('dark')
+			}
+
+			switchEl.addEventListener('click', function () {
+				bodyEl.classList.toggle('dark')
+				if (bodyEl.classList.contains('dark')) {
+					localStorage.setItem('theme', 'dark')
+				} else {
+					localStorage.removeItem('theme')
+				}
+			})
+		</script>
+	</body>
+</html>
