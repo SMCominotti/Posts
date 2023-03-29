@@ -1,0 +1,74 @@
+/* Base styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	display: grid;
+	place-items: center;
+	background-color: #e4ecfa;
+}
+input,
+button {
+	font: inherit;
+	border: none;
+	outline: none;
+}
+/* Base styles end */
+.upload {
+	width: 250px;
+	background-color: #1c212e;
+	color: #eee;
+	display: grid;
+	border-radius: 8px;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	gap: 10px;
+}
+.upload__body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 20px;
+	border: 2px dashed #eee;
+	border-radius: inherit;
+}
+.upload__body i {
+	font-size: 48px;
+}
+.upload__footer {
+	position: relative;
+	background-color: #2f3343;
+	border-radius: inherit;
+	transition: background-color 0.25s;
+}
+.upload__button {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.upload__footer:hover {
+	background-color: #3c3f4e;
+}
+.upload__button span {
+	opacity: 0.5;
+}
+#upload__input {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	visibility: hidden;
+}
