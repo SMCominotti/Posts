@@ -1,0 +1,100 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #2b2b2d;
+	display: grid;
+	place-content: center;
+}
+/* ======================== */
+.product-card {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	width: 280px;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 8px;
+	overflow-y: hidden;
+}
+.product-card__image {
+	display: block;
+	max-width: 100%;
+	animation: fadeIn 0.25s;
+}
+.product-card__caption {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: #2b2b2d;
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 1px;
+	padding: 20px;
+	border-radius: inherit;
+	animation: fadeIn 0.5s;
+}
+.product-card__title {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.product-card__subtitle {
+	color: #d8d7e3;
+}
+.product-card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.product-card__price {
+	font-weight: 600;
+}
+.product-card__button {
+	display: grid;
+	place-items: center;
+	width: 30px;
+	height: 30px;
+	background-color: #03d7c9;
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.25s;
+}
+.product-card__button:hover,
+.product-card__button:focus {
+	background-color: #01bdb0;
+}
+.product-card__icon {
+	font-size: 18px;
+	transition: transform 0.25s;
+}
+.product-card__button:hover .product-card__icon,
+.product-card__button:focus .product-card__icon {
+	transform: rotate(1turn);
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
