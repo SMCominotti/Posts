@@ -1,0 +1,85 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #1e1f22;
+}
+/* ======================== */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	transition: background-color 0.5s;
+}
+.container {
+	max-width: 1200px;
+	margin-inline: auto;
+	padding-inline: 16px;
+}
+.nav {
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+	transition: height 0.25s;
+}
+.nav__logo {
+	text-decoration: none;
+}
+.nav__logo-image {
+	display: block;
+	width: 40px;
+}
+.button {
+	display: inline-block;
+	background-color: #33ffbb;
+	color: #101010;
+	padding: 8px 20px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.25s;
+}
+.button:hover,
+.button:focus {
+	background-color: #2ad39f;
+}
+.header.header--active {
+	background-color: #17181a;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.header.header--active .nav {
+	height: 60px;
+}
+/* Hero Demo Content*/
+.demo-content {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	color: #fff;
+	font-size: 50px;
+}
+
+.dc--1,
+.dc--3 {
+	background-color: #17181a;
+}
+/* Hero end*/
