@@ -1,0 +1,109 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	/* Don't ignore this. It's important to hide the overflow. */
+	overflow-x: hidden;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #000;
+	line-height: 1.5;
+}
+/* ======================== */
+.container {
+	max-width: 1200px;
+	margin-inline: auto;
+	padding-inline: 16px;
+}
+.showcase {
+	padding-block: 5rem;
+	color: #fff;
+}
+.showcase__container {
+	position: relative;
+	padding: 42px 16px;
+	margin-left: -16px;
+}
+.showcase__container::before,
+.showcase__container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 200vw;
+	height: 100%;
+	background-color: #151517;
+}
+.showcase__container::after {
+	transform-origin: bottom left;
+	transform: rotate(3deg);
+}
+.showcase__text {
+	max-width: 500px;
+}
+.showcase__title {
+	font-size: clamp(32px, 5vw, 52px);
+}
+.showcase__paragraph {
+	font-size: 18px;
+	margin-block: 16px 32px;
+}
+.showcase__button {
+	display: inline-block;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	background-color: #0071e3;
+	transition: background-color 250ms;
+}
+.showcase__button:hover {
+	background-color: #0f60b2;
+}
+.showcase__image-wrapper {
+	display: none;
+}
+@media screen and (min-width: 50em) {
+	.showcase__container {
+		display: grid;
+		grid-template-columns: 500px 1fr;
+		column-gap: 84px;
+		padding: 72px 44px;
+		margin-left: 0;
+	}
+	.showcase__container::before,
+	.showcase__container::after {
+		border-radius: 18px;
+	}
+	.showcase__title {
+		line-height: 62px;
+	}
+	.showcase__paragraph {
+		margin-bottom: 48px;
+	}
+}
+@media screen and (min-width: 68.75em) {
+	.showcase__image-wrapper {
+		display: block;
+	}
+	.showcase__image {
+		display: block;
+		width: 750px;
+		height: 100%;
+	}
+}
