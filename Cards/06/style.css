@@ -1,0 +1,69 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #131213;
+	line-height: 1.5;
+	display: grid;
+	place-items: center;
+}
+/* ======================== */
+.card {
+	position: relative;
+	isolation: isolate;
+	width: 425px;
+	height: 225px;
+	background-color: #000;
+	border-radius: 8px;
+}
+.card__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0 20%;
+	border-radius: inherit;
+	transition: transform 250ms;
+}
+.card:hover .card__image {
+	transform: translateY(-112px) scale(0.75);
+}
+.card__body {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 24px;
+	color: #f4c644;
+}
+.card__category {
+	color: #fff;
+}
+.card__button {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	background-color: #f4c644;
+	color: #000;
+	transition: background-color 250ms;
+}
+.card__button:hover{
+	background-color: #d9ad34;
+}
